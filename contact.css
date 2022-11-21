@@ -117,7 +117,7 @@ a{
     transition: all 0.2s;
 }
 .form{
-    margin-top: 30px;
+    margin-top: 150px;
     width: 100%;
     display: flex;
     align-content: center;
@@ -147,6 +147,9 @@ a{
     padding:  30px 50px;
     border-radius: 5px;
     box-shadow: 0 0px 7px 2px rgba(0,0,0,0.15);
+}
+h2{
+    margin: 10px 0px;
 }
 .buton-form{
     display: flex;
@@ -266,6 +269,9 @@ a{
     }
 }
 @media all and (max-width: 770px){
+    #block-text-form{
+        height: 150px;
+    }
     .header-left{
         display: none;
     }
@@ -281,6 +287,7 @@ a{
     }
     .contact-bottom{
         flex-direction: column;
+        font-size: 14px;
     }
     .stanga{
         width: 100%;
@@ -300,5 +307,6 @@ a{
     }
     .ffff{
         width: 85%;
+        padding: 30px 30px;
     }
 }

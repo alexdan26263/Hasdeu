@@ -97,6 +97,7 @@ a{
     margin-left: 5px;
 }
 .main{
+    margin-top: 100px;
     width: 100%;
     background-image: url('images/hasdeu2-gradient-left.png');
     background-size: cover;
