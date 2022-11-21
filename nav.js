@@ -14,16 +14,18 @@ let sideDropdownOpen = false;
 //         closeNav();
 //     }
 // }, 250);
-window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-    if (scroll > 50){
-        document.getElementById("sideNav").style.top = "100px";
-    }
-    else if (scroll <= 50){
-        let a = 140 - scroll;
-        document.getElementById("sideNav").style.top = a + "px";
-    }
-});
+
+
+// window.addEventListener("scroll", (event) => {
+//     let scroll = this.scrollY;
+//     if (scroll > 50){
+//         document.getElementById("sideNav").style.top = "100px";
+//     }
+//     else if (scroll <= 50){
+//         let a = 140 - scroll;
+//         document.getElementById("sideNav").style.top = a + "px";
+//     }
+// });
 function closeNav() {
     document.getElementById("sideNav").style.width = "0";
     bar1.style.marginBottom = '10px';
@@ -69,3 +71,30 @@ function check(){
         openNav();
     }
 }
+$('.sidenav').on('DOMMouseScroll mousewheel', function(ev) {
+    var $this = $(this),
+        scrollTop = this.scrollTop,
+        scrollHeight = this.scrollHeight,
+        height = $this.height(),
+        delta = (ev.type == 'DOMMouseScroll' ?
+            ev.originalEvent.detail * -40 :
+            ev.originalEvent.wheelDelta),
+        up = delta > 0;
+
+    var prevent = function() {
+        ev.stopPropagation();
+        ev.preventDefault();
+        ev.returnValue = false;
+        return false;
+    }
+
+    if (!up && -delta > scrollHeight - height - scrollTop) {
+        // Scrolling down, but this will take us past the bottom.
+        $this.scrollTop(scrollHeight);
+        return prevent();
+    } else if (up && delta > scrollTop) {
+        // Scrolling up, but this will take us past the top.
+        $this.scrollTop(0);
+        return prevent();
+    }
+});

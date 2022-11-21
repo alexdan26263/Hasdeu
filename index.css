@@ -189,6 +189,7 @@ a{
         display: block;
     }
     .body2{
+        top: -3%;
         margin-left: 3%;
         margin-right: 3%;
     }
@@ -230,6 +231,12 @@ a{
     }
 }
 @media all and (max-width: 770px){
+    .wrapper{
+        padding: 40px 30px;
+    }
+    .body2{
+        top: -4%;
+    }
     .titlu-div h1{
         font-size: 40px;
     }
@@ -241,5 +248,13 @@ a{
         width: 100%;
         align-items: center;
         justify-content: center;
+    }
+}
+@media all and (max-width: 460px){
+    .body2{
+        top: -5%;
+    }
+    .titlu-div h1{
+        font-size: 30px;
     }
 }
