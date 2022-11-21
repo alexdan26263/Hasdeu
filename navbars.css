@@ -301,6 +301,9 @@ nav .img-logo{
     margin-left: 50px;
 }
 @media all and (max-height: 500px){
+    .main{
+        margin-top: 70px;
+    }
     .logo-navbar{
         padding-bottom: 5px;
     }
