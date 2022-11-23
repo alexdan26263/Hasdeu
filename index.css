@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 html{
     scroll-behavior: smooth;
 }
@@ -88,13 +87,12 @@ a{
     font-size: 20px;
     margin-top: 30px;
     font-weight: 700;
-    border-radius: 3px;
     transition: all 0.15s;
 }
 .buton-title:hover{
-    background-color: var(--darkSteelBlue);
+    background-color: var(--midnightBlue);
+    color: white;
     cursor: pointer;
-    margin-left: 5px;
 }
 .main{
     margin-top: 100px;
@@ -225,6 +223,22 @@ a{
     color: var(--midnightBlue);
     cursor: pointer;
 }
+.more{
+    white-space: nowrap;
+    margin-top: 50px;
+    width: 150px;
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--midnightBlue);
+    color: white;
+    transition: all 0.15s;
+}
+.more:hover{
+    box-shadow: 0 3px 7px 2px rgba(0,0,0,0.1);
+    background-color: white;
+    color: var(--midnightBlue);
+    cursor: pointer;
+}
 .noutati h1{
     margin-bottom: 50px;
 }
@@ -238,43 +252,68 @@ a{
 .noutati-item{
     display: flex;
     width: 100%;
-    height: 150px;
-    background-color: var(--midnightBlue);
+    height: 100px;
+    background-color: white;
     box-shadow: 0 3px 7px 2px rgba(0,0,0,0.1);
 }
-.noutati-item-pic{
-    background-size: cover;
-    width: 5%;
-    height: 100%;
-    opacity: 0.5;
-    transition: all 0.2s;
+.noutati-date{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    background-color: var(--midnightBlue);
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+}
+.noutati-date p{
+    font-weight: 400;
+}
+.arrow-date{
+    position: absolute;
+    font-size: 35px;
+    opacity: 0%;
+}
+.noutati-text h2{
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.noutati-text{
+    width: calc(100% - 100px);
+    padding: 20px 10px 20px 20px;
+    margin-right: 10px;
+}
+.noutati-text p, .noutati-text h2{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .noutati-item:hover{
     cursor: pointer;
 }
-.noutati-item:hover .noutati-item-pic{
-    width: 25%;
-    opacity: 1;
+.noutati-item:hover .noutati-date .date{
+    opacity: 0%;
 }
-.noutati-item:hover .noutati-item-text{
-    width: 75%;
+.noutati-item:hover .noutati-date .arrow-date{
+    opacity: 100%;
 }
-.noutati-item-text{
-    background-color: white;
-    padding: 15px 15px;
-    padding-left: 30px;
-    width: 95%;
-    height: 100%;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    transition: all 0.2s;
+.date-day{
+    font-size: 28px
 }
-.noutati-item-text h2{
-    font-weight: 600;
-    margin: 0px;
-    margin-bottom: 5px;
+.date-year{
+    font-size: 14px;
+}
+.noutati-tot2{
+    display: none;
 }
 @media all and (max-width: 1800px){
     .body2{
@@ -284,6 +323,9 @@ a{
 
 }
 @media all and (max-width: 1120px){
+    .more{
+        margin-top: 30px;
+    }
     .despre-text2{
         display: none;
     }
@@ -385,13 +427,6 @@ a{
         background-position: 50% 30%;
         margin-bottom: 30px;
     }
-    .noutati-item:hover .noutati-item-pic{
-        width: 35%;
-        opacity: 1;
-    }
-    .noutati-item:hover .noutati-item-text{
-        width: 65%;
-    }
     .wrapper{
         padding: 40px 30px;
     }
@@ -401,6 +436,80 @@ a{
     .titlu-div h1{
         font-size: 40px;
     }
+    .noutati-tot{
+        display: none;
+    }
+    .noutati-tot2{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 100%;
+    }
+    .noutati-item2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .noutati-text2{
+        width: 100%;
+        min-height: 100px;
+        background-color: white;
+        box-shadow: 0 3px 7px 2px rgba(0,0,0,0.1);
+        padding: 20px 10px 20px 20px;
+        margin-right: 10px;
+    }
+    .noutati-date2 .date-day, .noutati-date2 .date-month, .noutati-date2 .date-year{
+        display: inline-block;
+        font-size: 20px;
+    }
+    .noutati-date2{
+        box-shadow: 0 3px 7px 2px rgba(0,0,0,0.1);
+        display: flex;
+        width: 150px;
+        padding: 10px 10px;
+        background-color: var(--midnightBlue);
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+    .noutati-text2 h2{
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .noutati-text2 p{
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .noutati-text2 h2{
+        display:block;
+        white-space: wrap;
+    }
+    .noutati-item2:hover{
+        cursor: pointer;
+    }
+    .date2{
+        display: flex;
+        flex-direction: row;
+        transition: all 0.15s;
+    }
+    .noutati-item2:hover .date2{
+        opacity: 0%;
+    }
+    .arrow-date2{
+        vertical-align: top;
+        position: absolute;
+        font-size: 25px;
+        margin: 0;
+        opacity: 0%;
+    }
+    .noutati-item2:hover .noutati-date2 .arrow-date2{
+        opacity: 100%;
+    }
+    
 }
 @media all and (max-width: 630px){
     .despre-text2{
@@ -409,9 +518,6 @@ a{
     }
     .despre-text{
         display: none;
-    }
-    .noutati-item{
-        height: 120px;
     }
     .titlu-div h1{
         font-size: 35px;
