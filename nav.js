@@ -89,11 +89,9 @@ $('.sidenav').on('DOMMouseScroll mousewheel', function(ev) {
     }
 
     if (!up && -delta > scrollHeight - height - scrollTop) {
-        // Scrolling down, but this will take us past the bottom.
         $this.scrollTop(scrollHeight);
         return prevent();
     } else if (up && delta > scrollTop) {
-        // Scrolling up, but this will take us past the top.
         $this.scrollTop(0);
         return prevent();
     }

@@ -120,7 +120,7 @@ a{
     margin-bottom: 50px;
     font-size: 28px;
 }
-.oferta-educationala{
+.oferta-educationala, .despre{
     margin-bottom: 130px;
 }
 .oferta{
@@ -179,11 +179,18 @@ a{
 }
 .despre-tot{
     display: flex;
+    flex-direction: row-reverse;
     width: 100%;
 }
 .despre-text{
-    margin-right: 50px;
+    margin-left: 50px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.despre-text2{
+    margin-right: 50px;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -191,12 +198,12 @@ a{
     background-image: url(images/hasdeu3.jpg);
     background-size: cover;
     background-position: center;
-    box-shadow: 0 3px 7px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 7px 2px rgba(0,0,0,0.15);
 }
 .despre-text, .despre-pic{
     width: 50%;
 }
-.despre-text button{
+.despre-text button, .despre-text2 button{
     white-space: nowrap;
     margin-top: 50px;
     width: 150px;
@@ -212,6 +219,63 @@ a{
     color: var(--midnightBlue);
     cursor: pointer;
 }
+.despre-text2 button:hover{
+    box-shadow: 0 3px 7px 2px rgba(0,0,0,0.1);
+    background-color: white;
+    color: var(--midnightBlue);
+    cursor: pointer;
+}
+.noutati h1{
+    margin-bottom: 50px;
+}
+.noutati-tot{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+.noutati-item{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--midnightBlue);
+    box-shadow: 0 3px 7px 2px rgba(0,0,0,0.1);
+}
+.noutati-item-pic{
+    background-size: cover;
+    width: 5%;
+    height: 100%;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+.noutati-item:hover{
+    cursor: pointer;
+}
+.noutati-item:hover .noutati-item-pic{
+    width: 25%;
+    opacity: 1;
+}
+.noutati-item:hover .noutati-item-text{
+    width: 75%;
+}
+.noutati-item-text{
+    background-color: white;
+    padding: 15px 15px;
+    padding-left: 30px;
+    width: 95%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.noutati-item-text h2{
+    font-weight: 600;
+    margin: 0px;
+    margin-bottom: 5px;
+}
 @media all and (max-width: 1800px){
     .body2{
         margin-left: 10%;
@@ -220,6 +284,9 @@ a{
 
 }
 @media all and (max-width: 1120px){
+    .despre-text2{
+        display: none;
+    }
     .oferta-educationala{
         margin-bottom: 100px;
     }
@@ -244,6 +311,7 @@ a{
     }
     .despre-text, .despre-pic{
         width: 100%;
+        margin-left: 0px;
     }
     .despre-pic{
         height: 300px;
@@ -307,12 +375,22 @@ a{
     }
 }
 @media all and (max-width: 790px){
+    .buton-title{
+        font-size: 15px;
+    }
     .despre-pic{
         height: 230px;
         background-image: url(images/hasdeu3.jpg);
         background-size: cover;
         background-position: 50% 30%;
         margin-bottom: 30px;
+    }
+    .noutati-item:hover .noutati-item-pic{
+        width: 35%;
+        opacity: 1;
+    }
+    .noutati-item:hover .noutati-item-text{
+        width: 65%;
     }
     .wrapper{
         padding: 40px 30px;
@@ -323,16 +401,23 @@ a{
     .titlu-div h1{
         font-size: 40px;
     }
-    .header-left{
+}
+@media all and (max-width: 630px){
+    .despre-text2{
+        margin-right: 0px;
+        display: block;
+    }
+    .despre-text{
         display: none;
     }
-    .header-center{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
+    .noutati-item{
+        height: 120px;
     }
+    .titlu-div h1{
+        font-size: 35px;
+        }
 }
+
 @media all and (max-width: 550px){
     .despre-pic{
         height: 200px;

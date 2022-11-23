@@ -75,16 +75,20 @@ a{
 }
 .input-top input{
     font-size: 15px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: solid;
     color: var(--midnightBlue);
     border-width: 2px;
     width: 100%;
 }
+
 .input-top{
     width: 50%;
 }
 #block-text-form{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
     resize: none;
     width: 100%;
     height: 250px;
@@ -204,7 +208,7 @@ h2{
     text-decoration: underline;
 }
 #fax{
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 500;
     color: #6e6a8e;
 }
