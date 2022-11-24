@@ -68,7 +68,7 @@ a{
     filter: invert();
 }
 .body2{
-    padding: 200px 15%;
+    padding: 150px 15%;
 }
 .wrapper{
     margin-top: 15px;
@@ -121,8 +121,21 @@ button svg{
     background-color: rgb(193, 195, 214);
     transition: all 0.15s;
 }
+.downloads{
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+}
+.down-item{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+}
 @media all and (max-width: 1120px){
     .body2{
-        padding: 200px 5%;
+        padding: 120px 5%;
     }
 }
