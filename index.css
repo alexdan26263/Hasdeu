@@ -382,22 +382,8 @@ a{
         align-content: flex-end;
         justify-content: flex-end;
     }   
-    .icon-hamburger{
-        transform-origin: 50% 50%;
-        margin-top: 8px;
-        transition: all 0.15s;
-    }
+
     .width-full-navbar-1100 button:hover{
-        cursor: pointer;
-    }
-    .width-full-navbar-1100 button:hover .bar-hamburger{
-        background-color: var(--darkSteelBlue);
-    }
-    .icon-hamburger:hover .bar-hamburger{
-        background-color: var(--darkSteelBlue);
-    }
-    .width-full-navbar-1100 button:hover  .icon-hamburger{
-        fill: var(--darkSteelBlue);
         cursor: pointer;
     }
     .width-full-navbar-1100 button{

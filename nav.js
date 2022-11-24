@@ -72,7 +72,7 @@ function check(){
     }
 }
 $('.sidenav').on('DOMMouseScroll mousewheel', function(ev) {
-    var $this = $(this),
+    let $this = $(this),
         scrollTop = this.scrollTop,
         scrollHeight = this.scrollHeight,
         height = $this.height(),
@@ -81,7 +81,7 @@ $('.sidenav').on('DOMMouseScroll mousewheel', function(ev) {
             ev.originalEvent.wheelDelta),
         up = delta > 0;
 
-    var prevent = function() {
+    let prevent = function() {
         ev.stopPropagation();
         ev.preventDefault();
         ev.returnValue = false;
